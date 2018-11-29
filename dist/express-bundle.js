@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n// setup env variables\n__webpack_require__(/*! dotenv */ \"dotenv\").config()\n\n// SILENCE ERROR IN PROD\nif (false) {}\n\n// PACKAGES\nconst express = __webpack_require__(/*! express */ \"express\");\nconst path = __webpack_require__(/*! path */ \"path\");\nconst bodyParser = __webpack_require__(/*! body-parser */ \"body-parser\");\nconst morgan = __webpack_require__(/*! morgan */ \"morgan\");\nconst webpackDevMiddleware = __webpack_require__(/*! webpack-dev-middleware */ \"webpack-dev-middleware\");\nconst webpackHotMiddleware = __webpack_require__(/*! webpack-hot-middleware */ \"webpack-hot-middleware\");\n\nconst PORT = process.env.PORT || 3000;\nconst webpack = __webpack_require__(/*! webpack */ \"webpack\");\nconst webpackConfig = __webpack_require__(/*! ../../webpack.dev.config.js */ \"./webpack.dev.config.js\");\nconst compiler = webpack(webpackConfig);\n\n// SETUP ROUTES . . .\nconst index = __webpack_require__(/*! ./routes/index */ \"./src/server/routes/index.js\");\n\n// EXPRESS APP\nconst app = express();\n\n// HTTP headers security\napp.disable('x-powered-by');\n\n// MIDDLEWARE . . .\n// parse application/x-www-form-urlencoded\napp.use(bodyParser.urlencoded({ extended: false }));\n\n// parse application/json\napp.use(bodyParser.json());\n\n// http request logger\nswitch (app.get('env')) {\n  case 'production':\n    app.use(morgan('combined'));\n    break;\n  case 'development':\n    app.use(morgan('dev'));\n    break;\n  default:\n    console.log('No logging done by morgan.');\n}\n\napp.use(webpackDevMiddleware(compiler, webpackConfig.devServer));\n\napp.use(webpackHotMiddleware(compiler));\n\n// SERVE STATIC FILES\napp.use(express.static(path.join(__dirname, 'dist')));\n\n// USE ROUTES . . .\napp.use('/api', index);\n\n// CATCH ALL 404\napp.use(function(_req, res, _next) {\n  res.sendStatus(404);\n});\n\n// ERROR HANDLING\napp.use(function(err, req, res, next) {\n  console.error(err.message);\n\n  // If no specified error code, set to 'Internal Server Error (500)'\n  if (!err.statusCode) {\n    err.statusCode = 500;\n  }\n\n  // Send error with status code and message\n  res.status(err.statusCode).send(err.message);\n});\n\n// START SERVER!!!\napp.listen(PORT, function() {\n  console.log('Served fresh daily on PORT: ', PORT);\n});\n\n\n//# sourceURL=webpack:///./src/server/express.js?");
+eval("\r\n\r\n// setup env variables\r\n__webpack_require__(/*! dotenv */ \"dotenv\").config()\r\n\r\n// SILENCE ERROR IN PROD\r\nif (false) {}\r\n\r\n// PACKAGES\r\nconst express = __webpack_require__(/*! express */ \"express\");\r\nconst path = __webpack_require__(/*! path */ \"path\");\r\nconst bodyParser = __webpack_require__(/*! body-parser */ \"body-parser\");\r\nconst morgan = __webpack_require__(/*! morgan */ \"morgan\");\r\nconst webpackDevMiddleware = __webpack_require__(/*! webpack-dev-middleware */ \"webpack-dev-middleware\");\r\nconst webpackHotMiddleware = __webpack_require__(/*! webpack-hot-middleware */ \"webpack-hot-middleware\");\r\n\r\nconst PORT = process.env.PORT || 3000;\r\nconst webpack = __webpack_require__(/*! webpack */ \"webpack\");\r\nconst webpackConfig = __webpack_require__(/*! ../../webpack.server.config.js */ \"./webpack.server.config.js\");\r\nconst compiler = webpack(webpackConfig);\r\n\r\n// SETUP ROUTES . . .\r\nconst index = __webpack_require__(/*! ./routes/index */ \"./src/server/routes/index.js\");\r\n\r\n// EXPRESS APP\r\nconst app = express();\r\n\r\n// HTTP headers security\r\napp.disable('x-powered-by');\r\n\r\n// MIDDLEWARE . . .\r\n// parse application/x-www-form-urlencoded\r\napp.use(bodyParser.urlencoded({ extended: false }));\r\n\r\n// parse application/json\r\napp.use(bodyParser.json());\r\n\r\n// http request logger\r\nswitch (app.get('env')) {\r\n  case 'production':\r\n    app.use(morgan('combined'));\r\n    break;\r\n  case 'development':\r\n    app.use(morgan('dev'));\r\n    break;\r\n  default:\r\n    console.log('No logging done by morgan.');\r\n}\r\n\r\napp.use(webpackDevMiddleware(compiler, webpackConfig.devServer));\r\napp.use(webpackHotMiddleware(compiler));\r\n\r\n// SERVE STATIC FILES\r\napp.use(express.static(path.join(__dirname, 'dist')));\r\n\r\n// USE ROUTES . . .\r\napp.use('/api', index);\r\n\r\n// CATCH ALL 404\r\napp.use(function(_req, res, _next) {\r\n  res.sendStatus(404);\r\n});\r\n\r\n// ERROR HANDLING\r\napp.use(function(err, req, res, next) {\r\n  console.error(err.message);\r\n\r\n  // If no specified error code, set to 'Internal Server Error (500)'\r\n  if (!err.statusCode) {\r\n    err.statusCode = 500;\r\n  }\r\n\r\n  // Send error with status code and message\r\n  res.status(err.statusCode).send(err.message);\r\n});\r\n\r\n// START SERVER!!!\r\napp.listen(PORT, function() {\r\n  console.log('Served fresh daily on PORT: ', PORT);\r\n});\r\n\n\n//# sourceURL=webpack:///./src/server/express.js?");
 
 /***/ }),
 
@@ -105,18 +105,18 @@ eval("\n\n// setup env variables\n__webpack_require__(/*! dotenv */ \"dotenv\").
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var express = __webpack_require__(/*! express */ \"express\");\nvar router = express.Router();\n\n/* GET home page. */\nrouter.get('/', function(req, res, next) {\n  res.sendStatus(200);\n  res.send('Hello Express routes!')\n});\n\nmodule.exports = router;\n\n\n//# sourceURL=webpack:///./src/server/routes/index.js?");
+eval("var express = __webpack_require__(/*! express */ \"express\");\r\nvar router = express.Router();\r\n\r\n/* GET home page. */\r\nrouter.get('/', function(req, res, next) {\r\n  res.sendStatus(200);\r\n  res.send('Hello Express routes!')\r\n});\r\n\r\nmodule.exports = router;\r\n\n\n//# sourceURL=webpack:///./src/server/routes/index.js?");
 
 /***/ }),
 
-/***/ "./webpack.dev.config.js":
-/*!*******************************!*\
-  !*** ./webpack.dev.config.js ***!
-  \*******************************/
+/***/ "./webpack.server.config.js":
+/*!**********************************!*\
+  !*** ./webpack.server.config.js ***!
+  \**********************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("\n\n//# sourceURL=webpack:///./webpack.dev.config.js?");
+eval("const path = __webpack_require__(/*! path */ \"path\");\r\nconst webpack = __webpack_require__(/*! webpack */ \"webpack\");\r\nconst nodeExternals = __webpack_require__(/*! webpack-node-externals */ \"webpack-node-externals\");\r\n\r\nmodule.exports = {\r\n  mode: 'development',\r\n  entry: {\r\n    server: './src/server/express.js',\r\n  },\r\n  output: {\r\n    path: path.join(__dirname, 'dist'),\r\n    publicPath: '/',\r\n    filename: 'express-bundle.js'\r\n  },\r\n  target: 'node',\r\n  node: {\r\n    __dirname: false\r\n  },\r\n  externals: [nodeExternals()]\r\n}\r\n\n\n//# sourceURL=webpack:///./webpack.server.config.js?");
 
 /***/ }),
 
@@ -205,6 +205,17 @@ eval("module.exports = require(\"webpack-dev-middleware\");\n\n//# sourceURL=web
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"webpack-hot-middleware\");\n\n//# sourceURL=webpack:///external_%22webpack-hot-middleware%22?");
+
+/***/ }),
+
+/***/ "webpack-node-externals":
+/*!*****************************************!*\
+  !*** external "webpack-node-externals" ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"webpack-node-externals\");\n\n//# sourceURL=webpack:///external_%22webpack-node-externals%22?");
 
 /***/ })
 

@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./dist/server-bundle.js",
-    "dev": "rm -rf dist && webpack --mode=development --config=webpack.server.config.js",
-    "build": "rm -rf dist && webpack --mode=production --config=webpack.server.config.js"
+    "start": "nodemon ./dist/express-bundle.js",
+    "dev": "rm -rf dist && webpack --mode development --config webpack.server.config.js",
+    "build": "rm -rf dist && webpack --mode production --config webpack.server.config.js"
   },
   "keywords": [],
   "author": "",

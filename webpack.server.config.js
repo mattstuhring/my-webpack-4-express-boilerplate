@@ -3,13 +3,14 @@ const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
+  mode: 'development',
   entry: {
     server: './src/server/express.js',
   },
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
-    filename: 'server-bundle.js'
+    filename: 'express-bundle.js'
   },
   target: 'node',
   node: {

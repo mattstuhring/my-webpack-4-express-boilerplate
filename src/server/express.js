@@ -18,7 +18,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 
 const PORT = process.env.PORT || 3000;
 const webpack = require('webpack');
-const webpackConfig = require('../../webpack.dev.config.js');
+const webpackConfig = require('../../webpack.server.config.js');
 const compiler = webpack(webpackConfig);
 
 // SETUP ROUTES . . .
@@ -50,7 +50,6 @@ switch (app.get('env')) {
 }
 
 app.use(webpackDevMiddleware(compiler, webpackConfig.devServer));
-
 app.use(webpackHotMiddleware(compiler));
 
 // SERVE STATIC FILES
