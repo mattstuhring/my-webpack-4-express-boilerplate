@@ -1,20 +1,20 @@
 'use strict';
 
 // setup env variables
-require('dotenv').config()
+require('dotenv').config();
 
 // SILENCE ERROR IN PROD
 if (process.env.NODE_ENV === 'production') {
   require('dotenv').config({ silent: true });
 }
 
-// PACKAGES
+// PACKAGES . . .
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
+// const webpackHotMiddleware = require('webpack-hot-middleware');
 
 const PORT = process.env.PORT || 3000;
 const webpack = require('webpack');
@@ -49,16 +49,24 @@ switch (app.get('env')) {
     console.log('No logging done by morgan.');
 }
 
-app.use(webpackDevMiddleware(compiler, webpackConfig.devServer));
-app.use(webpackHotMiddleware(compiler));
+// app.use(webpackDevMiddleware(compiler, webpackConfig.devServer));
+app.use(webpackDevMiddleware(compiler, {
+  publicPath: webpackConfig.output.publicPath,
+  reload: true,
+  timeout: 2000
+}));
+
+// app.use(webpackHotMiddleware(compiler));
 
 // SERVE STATIC FILES
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static('dist'));
+
+console.log('Hello Express');
 
 // USE ROUTES . . .
 app.use('/api', index);
 
-// CATCH ALL 404
+// 404 CATCH ALL
 app.use(function(_req, res, _next) {
   res.sendStatus(404);
 });
@@ -66,12 +74,10 @@ app.use(function(_req, res, _next) {
 // ERROR HANDLING
 app.use(function(err, req, res, next) {
   console.error(err.message);
-
   // If no specified error code, set to 'Internal Server Error (500)'
   if (!err.statusCode) {
     err.statusCode = 500;
   }
-
   // Send error with status code and message
   res.status(err.statusCode).send(err.message);
 });
