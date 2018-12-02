@@ -1,7 +1,30 @@
-.home {
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-  .title {
-    color: blue;
+.home {
+  font-family: 'Montserrat', sans-serif;
+
+  .jumbotron {
+    margin-top: 50px;;
+
+    div.row.imgs-row {
+      margin-left: 0px;
+      margin-right: 0px;
+      background-color: white;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    div.row.imgs-row img.img-expressjs {
+      margin-top: 20px;
+      width: 60%;
+    }
+
+    div.row.imgs-row img.img-webpack-4 {
+      margin-top: 20px;
+      width: 100%;
+    }
+
   }
 
 }

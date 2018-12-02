@@ -24,7 +24,29 @@ module.exports = {
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader' },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: function () {
+                return [
+                  require('autoprefixer')
+                ];
+              }
+            }
+          },
           { loader: 'sass-loader' }
+        ]
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          { loader: 'file-loader' }
+        ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: [
+          { loader: 'url-loader?limit=100000' }
         ]
       }
     ]
