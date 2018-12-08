@@ -23,7 +23,10 @@
     "popper.js": "^1.14.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
     "autoprefixer": "^9.3.1",
+    "babel-loader": "^8.0.4",
     "css-loader": "^1.0.1",
     "file-loader": "^2.0.0",
     "html-loader": "^0.5.5",

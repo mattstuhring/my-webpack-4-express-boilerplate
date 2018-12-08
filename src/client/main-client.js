@@ -1,7 +1,7 @@
 import 'bootstrap';
-import './css/style.scss';
+import './style/main.scss';
 import './index.html';
 
 import module from './js/module.js';
 
-console.log('Module: ', module);
+console.log('Message: ', module());

@@ -1,3 +1,6 @@
-const module = { comment: 'Hello Modules!' };
+const module = () => 'Hello ES6 Modules';
+
+
+
 
 export default module;

@@ -108,14 +108,14 @@ eval("exports = module.exports = __webpack_require__(/*! ../../../css-loader/lib
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js!./src/client/css/style.scss":
-/*!**************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--5-2!./node_modules/sass-loader/lib/loader.js!./src/client/css/style.scss ***!
-  \**************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js!./src/client/style/main.scss":
+/*!***************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/lib/loader.js!./src/client/style/main.scss ***!
+  \***************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\nexports.i(__webpack_require__(/*! -!../../../node_modules/css-loader!bootstrap/dist/css/bootstrap.css */ \"./node_modules/css-loader/index.js!./node_modules/bootstrap/dist/css/bootstrap.css\"), \"\");\nexports.push([module.i, \"@import url(https://fonts.googleapis.com/css?family=Montserrat);\", \"\"]);\n\n// module\nexports.push([module.i, \".home {\\n  font-family: 'Montserrat', sans-serif; }\\n  .home .jumbotron {\\n    margin-top: 50px; }\\n    .home .jumbotron div.row.imgs-row {\\n      margin-left: 0px;\\n      margin-right: 0px;\\n      background-color: white;\\n      margin-bottom: 20px;\\n      border-radius: 5px; }\\n    .home .jumbotron div.row.imgs-row img.img-expressjs {\\n      margin-top: 20px;\\n      width: 60%; }\\n    .home .jumbotron div.row.imgs-row img.img-webpack-4 {\\n      margin-top: 20px;\\n      width: 100%; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/client/css/style.scss?./node_modules/css-loader!./node_modules/postcss-loader/src??ref--5-2!./node_modules/sass-loader/lib/loader.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\nexports.i(__webpack_require__(/*! -!../../../node_modules/css-loader!bootstrap/dist/css/bootstrap.css */ \"./node_modules/css-loader/index.js!./node_modules/bootstrap/dist/css/bootstrap.css\"), \"\");\nexports.push([module.i, \"@import url(https://fonts.googleapis.com/css?family=Montserrat);\", \"\"]);\n\n// module\nexports.push([module.i, \".home {\\n  font-family: 'Montserrat', sans-serif; }\\n  .home .jumbotron {\\n    margin-top: 50px; }\\n    .home .jumbotron div.row.imgs-row {\\n      margin-left: 0px;\\n      margin-right: 0px;\\n      background-color: white;\\n      margin-bottom: 20px;\\n      border-radius: 5px; }\\n    .home .jumbotron div.row.imgs-row img.img-expressjs {\\n      margin-top: 20px;\\n      width: 60%; }\\n    .home .jumbotron div.row.imgs-row img.img-webpack-4 {\\n      margin-top: 20px;\\n      width: 100%; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/client/style/main.scss?./node_modules/css-loader!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/lib/loader.js");
 
 /***/ }),
 
@@ -186,17 +186,6 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
-/***/ "./src/client/css/style.scss":
-/*!***********************************!*\
-  !*** ./src/client/css/style.scss ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("\nvar content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/sass-loader/lib/loader.js!./style.scss */ \"./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js!./src/client/css/style.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/client/css/style.scss?");
-
-/***/ }),
-
 /***/ "./src/client/images/expressjs.jpg":
 /*!*****************************************!*\
   !*** ./src/client/images/expressjs.jpg ***!
@@ -238,7 +227,7 @@ eval("module.exports = \"<!DOCTYPE html>\\n<html lang=\\\"en\\\" dir=\\\"ltr\\\"
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconst module = { comment: 'Hello Modules!' };\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (module);\n\n\n//# sourceURL=webpack:///./src/client/js/module.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nvar module = function module() {\n  return 'Hello ES6 Modules';\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (module);\n\n//# sourceURL=webpack:///./src/client/js/module.js?");
 
 /***/ }),
 
@@ -250,7 +239,18 @@ eval("__webpack_require__.r(__webpack_exports__);\nconst module = { comment: 'He
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/style.scss */ \"./src/client/css/style.scss\");\n/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_style_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.html */ \"./src/client/index.html\");\n/* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_html__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _js_module_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/module.js */ \"./src/client/js/module.js\");\n\n\n\n\n\n\nconsole.log('Module: ', _js_module_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]);\n\n\n//# sourceURL=webpack:///./src/client/main-client.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\n/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/main.scss */ \"./src/client/style/main.scss\");\n/* harmony import */ var _style_main_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_main_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.html */ \"./src/client/index.html\");\n/* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_html__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _js_module_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/module.js */ \"./src/client/js/module.js\");\n\n\n\n\nconsole.log('Message: ', Object(_js_module_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])());\n\n//# sourceURL=webpack:///./src/client/main-client.js?");
+
+/***/ }),
+
+/***/ "./src/client/style/main.scss":
+/*!************************************!*\
+  !*** ./src/client/style/main.scss ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/sass-loader/lib/loader.js!./main.scss */ \"./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js!./src/client/style/main.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/client/style/main.scss?");
 
 /***/ })
 
