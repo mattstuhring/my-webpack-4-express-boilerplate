@@ -131,6 +131,17 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 
 /***/ }),
 
+/***/ "./src/client/images/babel.png":
+/*!*************************************!*\
+  !*** ./src/client/images/babel.png ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"722ecea72ec11bec6c647efcd94aab09.png\";\n\n//# sourceURL=webpack:///./src/client/images/babel.png?");
+
+/***/ }),
+
 /***/ "./src/client/images/expressjs.jpg":
 /*!*****************************************!*\
   !*** ./src/client/images/expressjs.jpg ***!
@@ -160,7 +171,7 @@ eval("module.exports = __webpack_require__.p + \"a93d16e30e887bbb9ae8b1bf8bcdb38
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = \"<!DOCTYPE html>\\n<html lang=\\\"en\\\" dir=\\\"ltr\\\">\\n  <head>\\n    <meta charset=\\\"utf-8\\\">\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1, shrink-to-fit=no\\\">\\n    <title>Webpack 4 & Express App</title>\\n\\n    <link rel=\\\"shortcut icon\\\" href=\\\"#\\\">\\n  </head>\\n  <body class=\\\"container\\\">\\n    <div class=\\\"home\\\">\\n\\n\\n      <div class=\\\"jumbotron\\\">\\n        <h1 class=\\\"display-4\\\">Hello World!</h1>\\n        <p class=\\\"lead\\\">Kick start your development with this Webpack 4 & Express JS boilerplate</p>\\n        <hr class=\\\"my-4\\\">\\n\\n          <div class=\\\"row imgs-row\\\">\\n            <div class=\\\"col-sm-6 text-center\\\">\\n              <img src=\\\"\" + __webpack_require__(/*! ./images/webpack-4.png */ \"./src/client/images/webpack-4.png\") + \"\\\" class=\\\"img-webpack-4\\\" alt=\\\"webpack 4 logo\\\">\\n            </div>\\n            <div class=\\\"col-sm-6 text-center\\\">\\n              <img src=\\\"\" + __webpack_require__(/*! ./images/expressjs.jpg */ \"./src/client/images/expressjs.jpg\") + \"\\\" class=\\\"img-expressjs\\\" alt=\\\"express logo\\\">\\n            </div>\\n          </div>\\n\\n        <a class=\\\"btn btn-primary btn-lg\\\" href=\\\"#\\\" role=\\\"button\\\">and Bootstrap 4</a>\\n      </div>\\n    </div>\\n  </body>\\n</html>\\n\";\n\n//# sourceURL=webpack:///./src/client/index.html?");
+eval("module.exports = \"<!DOCTYPE html>\\n<html lang=\\\"en\\\" dir=\\\"ltr\\\">\\n  <head>\\n    <meta charset=\\\"utf-8\\\">\\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1, shrink-to-fit=no\\\">\\n    <title>Webpack 4 & Express App</title>\\n\\n    <link rel=\\\"shortcut icon\\\" href=\\\"#\\\">\\n  </head>\\n  <body class=\\\"container\\\">\\n    <div class=\\\"home\\\">\\n\\n\\n      <div class=\\\"jumbotron\\\">\\n        <h1 class=\\\"display-4\\\">Hello World!</h1>\\n        <p class=\\\"lead\\\">Kick start your development with this boilerplate.</p>\\n        <hr class=\\\"my-4\\\">\\n\\n          <div class=\\\"row imgs-row\\\">\\n            <div class=\\\"col-sm-4 text-center\\\">\\n              <img src=\\\"\" + __webpack_require__(/*! ./images/webpack-4.png */ \"./src/client/images/webpack-4.png\") + \"\\\" class=\\\"img-webpack-4\\\" alt=\\\"webpack 4 logo\\\">\\n            </div>\\n            <div class=\\\"col-sm-4 text-center\\\">\\n              <img src=\\\"\" + __webpack_require__(/*! ./images/babel.png */ \"./src/client/images/babel.png\") + \"\\\" class=\\\"img-babel\\\" alt=\\\"babel logo\\\">\\n            </div>\\n            <div class=\\\"col-sm-4 text-center\\\">\\n              <img src=\\\"\" + __webpack_require__(/*! ./images/expressjs.jpg */ \"./src/client/images/expressjs.jpg\") + \"\\\" class=\\\"img-expressjs\\\" alt=\\\"express logo\\\">\\n            </div>\\n          </div>\\n\\n        <a class=\\\"btn btn-primary btn-lg\\\" href=\\\"#\\\" role=\\\"button\\\">and Bootstrap 4</a>\\n      </div>\\n    </div>\\n  </body>\\n</html>\\n\";\n\n//# sourceURL=webpack:///./src/client/index.html?");
 
 /***/ }),
 
